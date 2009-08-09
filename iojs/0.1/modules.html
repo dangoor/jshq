@@ -1,0 +1,113 @@
+<html>
+<head>
+  <title>IOJS 0.1 Module API</title>
+  <script src="../../jshq.js"></script>
+</head>
+<body onload="JSHQ.styleContent()">
+  <pre id="content" class="wiki">= IOJS Modules =
+    This specification addresses how modules should be written in order to be interoperable among a class of module systems that can be both client and server side, secure or insecure, implemented today or supported by future systems with syntax extensions.  These modules are offered privacy of their top scope, facility for importing singleton objects from other modules, and exporting their own API.  By implication, this specification defines the minimum features that a module system must provide in order to support interoperable modules.
+
+== Contract ==
+
+=== Module Context ===
+
+# In a module, there is a free variable "require", that is a function.
+## The "require" function accepts a module identifier.
+## "require" returns the exported API of the foreign module.
+## If there is a dependency cycle, the foreign module may not have finished executing at the time it is required by one of its transitive dependencies; in this case, the object returned by "require" must contain at least the exports that the foreign module has prepared before the call to require that led to the current module's execution.
+## If the requested module cannot be returned, "require" must throw an error.
+# In a module, there is a free variable called "exports", that is an object that the module may add its API to as it executes.
+# modules must use the "exports" object as the only means of exporting.
+
+=== Module Identifiers ===
+
+# A module identifier is a String of "terms" delimited by forward slashes.
+# A term must be a camelCase identifier, ".", or "..".
+# Module identifiers may not have file-name extensions like ".js".
+# Module identifiers may be "relative" or "top-level".  A module identifier is "relative" if the first term is "." or "..".
+# Top-level identifiers are resolved off the conceptual module name space root.
+# Relative identifiers are resolved relative to the identifier of the module in which "require" is written and called.
+
+=== Unspecified ===
+
+This specification leaves the following important points of interoperability unspecified:
+
+# Whether modules are stored with a database, file system, or factory functions, or are interchangeable with link libraries.
+# Whether a PATH is supported by the module loader for resolving module identifiers.
+
+== Unit Tests ==
+
+* [http://code.google.com/p/interoperablejs/ Unit Tests at Google Code] by Kris Kowal
+* [http://github.com/ashb/interoperablejs/tree/master Unit Tests Git Mirror] by Ash Berlin
+
+== Sample Code ==
+
+*math.js:*
+
+[(js)%
+ exports.add = function() {
+   var sum = arguments[0];
+   for (var i=1; i&lt;arguments.length; i++) {
+     sum += arguments[i];
+   }
+   return sum;
+ };
+%]
+
+*increment.js:*
+
+[(js)%
+ var add = require('math').add;
+ exports.increment = function(val) {
+   return add(val, 1);
+ };
+%]
+
+*program.js:*
+
+[(js)%
+ var inc = require('increment').increment;
+ var a = 1;
+ inc(a); // 2
+%]
+
+== Notes ==
+
+* [ServerJS/Modules/Secure,Secure Modules]
+* [ServerJS/Modules/CompiledModules,Notes on compiling modules for browsers]
+* [ServerJS/Modules/ScriptModules,On writing modules that also work as &lt;script>s]
+
+== Amendment Proposals ==
+
+1. [ServerJS/Modules/Loaders,Module Loaders]
+2. [ServerJS/Modules/Meta,Module Metaobject]
+
+== Implementations ==
+
+*Passing all compliance tests*
+
+* Flusspferd (Spidermonkey / C++) http://flusspferd.org/
+* Ondrej Zara's v8cgi for V8 http://code.google.com/p/v8cgi/
+* Tom Robinson's narwhal for Rhino http://github.com/tlrobinson/narwhal/
+* Wes Garland's GPSEE for Spidermonkey http://kenai.com/projects/gpsee/pages/Home
+* Kris Kowal's chiron for browsers http://github.com/kriskowal/chiron/
+* Hannes Wallnoefer's Helma NG for Rhino at http://github.com/hns/helma-ng/tree/master
+* Ben Collver's Trogl for v8 at http://bencollver.googlepages.com/trogl-1.zip
+
+*Fully implemented*
+
+* Kris Zyp's Persevere for Rhino at http://www.persvr.org/
+
+*In development*
+
+* nathan smith is implementing this for JScript and ASP at http://github.com/smith/interoperablejscript/tree/master
+* mob is implementing this in Ejscript http://www.ejscript.org
+* pmuellr posted a sample loader http://wiki.github.com/pmuellr/modjewel
+
+== Related Documents ==
+
+* Proposal to ECMA TC39: [http://docs.google.com/Doc?id=dfgxb7gk_34gpk37z9v&hl=en Module System for ES-Harmony]
+* Presentation to ECMA TC39: [http://docs.google.com/Presentation?docid=dcd8d5dk_0cs639jg8&hl=en Modules]
+</pre>
+</body>
+</html>

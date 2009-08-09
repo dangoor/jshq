@@ -5,33 +5,61 @@ var JSHQ = function() {
         options: {
             
         },
+        
+        // Taken from Dojo
+        _getBaseURL: function() {
+            if(document && document.getElementsByTagName){
+    			var scripts = document.getElementsByTagName("script");
+    			var rePkg = /jshq.js(\W|$)/i;
+    			for(var i = 0; i < scripts.length; i++){
+    				var src = scripts[i].getAttribute("src");
+    				if(!src){ continue; }
+    				var m = src.match(rePkg);
+    				if(m){
+    					// find out where we came from
+    					if(!JSHQ.options.baseURL){
+    						JSHQ.options.baseURL = src.substring(0, m.index);
+    					}
+    					break;
+    				}
+    			}
+    		}
+    		return JSHQ.options.baseURL;
+        },
+        
         styleContent: function() {
+            var baseURL = JSHQ._getBaseURL();
             var LAB = $LAB
                 .script("http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js");
             if (!window.Template) {
                 LAB
-                .script("lib/wiky.js")
-                .script("lib/wiky.lang.js");
+                .script(baseURL + "lib/wiky.js")
+                .script(baseURL + "lib/wiky.lang.js");
             }
             LAB.block(JSHQ._stylePhase2);
         },
         _stylePhase2: function() {
+            var baseURL = JSHQ.options.baseURL;
+            
+            // Brian Grinstead's updated version of Brandon Aaron's
+            // outerHTML plugin for jQuery
             $.fn.outerHTML = function() {
                 var doc = this[0] ? this[0].ownerDocument : document;
                 return $('<div>', doc).append(this.eq(0).clone()).html();
             };
             
             $("<link>").attr({rel: "stylesheet", type: "text/css",
-                href: "lib/wiky.css"}).appendTo("head");
+                href: baseURL + "lib/wiky.css"}).appendTo("head");
             $("<link>").attr({rel: "stylesheet", type: "text/css",
-                href: "lib/wiky.lang.css"}).appendTo("head");
+                href: baseURL + "lib/wiky.lang.css"}).appendTo("head");
             $("<link>").attr({rel: "stylesheet", type: "text/css",
-                href: "theme/style.css"}).appendTo("head");
+                href: baseURL + "theme/style.css"}).appendTo("head");
             
-            $.get("theme/contentwrap.html", function(data) {
+            $.get(baseURL + "theme/contentwrap.html", function(data) {
                 $ = jQuery;
                 var currentContent = $("#content").outerHTML();
                 var newContent = data.replace("%%HERE%%", currentContent);
+                newContent = newContent.replace(/%%BASE%%/g, baseURL);
                 $("#content").replaceWith(newContent);
                 
                 $(".wiki").each(function() {
