@@ -1,10 +1,43 @@
 // in-browser content display
 
 var JSHQ = function() {
+
+    // safe onload handler addition courtesy of Simon Willison
+    // http://simonwillison.net/2004/May/26/addLoadEvent/
+    var addLoadEvent = function(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+          window.onload = func;
+        } else {
+          window.onload = function() {
+            if (oldonload) {
+              oldonload();
+            }
+            func();
+          }
+        }
+    };
+    
+    var getJS = function() {
+        var baseURL = JSHQ._getBaseURL();
+        var LAB = $LAB
+            .script("http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js");
+        if (!window.Template) {
+            LAB
+            .script(baseURL + "lib/wiky.js")
+            .script(baseURL + "lib/wiky.lang.js");
+        }
+        LAB.block(JSHQ.styleContent);
+    };
+    
+    addLoadEvent(getJS);
+    
     return {
         options: {
             
         },
+        
+        addLoadEvent: addLoadEvent,
         
         // Taken from Dojo
         _getBaseURL: function() {
@@ -28,17 +61,6 @@ var JSHQ = function() {
         },
         
         styleContent: function() {
-            var baseURL = JSHQ._getBaseURL();
-            var LAB = $LAB
-                .script("http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js");
-            if (!window.Template) {
-                LAB
-                .script(baseURL + "lib/wiky.js")
-                .script(baseURL + "lib/wiky.lang.js");
-            }
-            LAB.block(JSHQ._stylePhase2);
-        },
-        _stylePhase2: function() {
             var baseURL = JSHQ.options.baseURL;
             
             // Brian Grinstead's updated version of Brandon Aaron's
