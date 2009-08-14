@@ -78,7 +78,7 @@ var JSHQ = function() {
                 href: baseURL + "theme/style.css"}).appendTo("head");
             
             $.get(baseURL + "theme/contentwrap.html", function(data) {
-                $ = jQuery;
+                window.$ = jQuery;
                 var currentContent = $("#content").outerHTML();
                 var newContent = data.replace("%%HERE%%", currentContent);
                 newContent = newContent.replace(/%%BASE%%/g, baseURL);
