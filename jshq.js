@@ -3,7 +3,7 @@
 var JSHQ = function() {
     var head = document.getElementsByTagName("head")[0];
     var style = document.createElement("style");
-    style.innerHTML = "#content { display: none }";
+    style.appendChild(document.createTextNode("#content { display: none }"));
     head.appendChild(style);
     
     // safe onload handler addition courtesy of Simon Willison
