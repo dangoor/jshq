@@ -1,0 +1,70 @@
+/* 960 Grid System
+Version 1.1
+2008-12-15
+
+Created by Nathan Smith. See the official site for more info: http://960.gs/
+
+============================================================================
+
+Thank you for downloading the 960 Grid System. I hope it helps to streamline
+web development workflow. Enclosed in the bundle are printable sketch sheets
+and template files for Adobe Fireworks and Photoshop, OmniGraffle and Visio.
+
+Also included is a lightweight CSS file, which contains the grid dimensions.
+To use this file, simply include the 960.css in the <head> of the HTML page.	
+You may also use the reset.css and text.css files, or opt to leave them out.
+Here is an example of the XHTML code necessary to incorporate the CSS files:
+
+<head>
+<meta name="description" content="MiniCon Magazine description goes here" />
+<meta name="author" content="Your Name and Pukeko Design Studio" />
+<meta name="keywords" content="magazine"/>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/text.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/960.css" />
+</head>
+
+The files in the 960 Grid System are free of charge, licensed under GPL/MIT.
+
+============================================================================
+
+Special thanks to Eric Meyer for his comprehensive browser reset stylesheet.
+
+http://meyerweb.com/eric/tools/css/reset/
+
+*/
+
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+	margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent
+}
+
+body {
+	line-height:1
+}
+
+ol,ul {
+	list-style:none
+}
+
+blockquote,q {
+	quotes:none
+}
+
+:focus {
+	outline:0
+}
+
+ins {
+	text-decoration:none
+}
+
+del {
+	text-decoration:line-through
+}
+
+table {
+	border-collapse:collapse;border-spacing:0
+}
+

@@ -1,0 +1,71 @@
+/* IE 7 CSS ONLY */
+
+.header ul li a {
+	line-height: 150%;
+}
+
+ul {
+	margin: 0 0 20px 0;
+	padding: 0;
+	position: relative;
+	left: -1.2em;
+	overflow: hidden;
+}
+ul li {
+	list-style-type: disc;
+	color: #333;
+	line-height: 140%;
+	padding: 5px 0;
+	margin: 0 0 0 1.2em;
+	font-size: 0.9em;
+}
+ul li ul {
+	margin: 0.5em 0 0 1.4em;
+}
+ul li ul li {
+	padding: 5px 0;
+	list-style-type:circle;
+}
+
+ol {
+	margin: 0 0 20px 0;
+	padding: 0;
+	position: relative;
+	left: -1.8em;
+	overflow: hidden;
+}
+ol li {
+	list-style-type:decimal;
+	color: #333;
+	line-height: 140%;
+	padding: 5px 0;
+	margin: 0 0 0 2em;
+	font-size: 0.9em;
+}
+ol li ol {
+	margin: 0.5em 0 0 1.8em;
+}
+ol li ol li {
+	padding: 5px 0;
+	list-style-type:lower-alpha;
+}
+
+.article_firstparagraph:first-letter {
+	line-height: 90%;
+}
+
+.floatLeft, .floatRight {
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.home_article_text, .home_feature_text {
+	padding-bottom: 10px;
+}
+
+.footer ul {
+	margin: 20px 0 10px 18px;
+}
+.footer_newsletter_button {
+	padding: 2px 0 4px 0;
+}

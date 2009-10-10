@@ -1,0 +1,226 @@
+/* 960 Grid System
+Version 1.1
+2008-12-15
+
+Created by Nathan Smith. See the official site for more info: http://960.gs/
+
+============================================================================
+
+Thank you for downloading the 960 Grid System. I hope it helps to streamline
+web development workflow. Enclosed in the bundle are printable sketch sheets
+and template files for Adobe Fireworks and Photoshop, OmniGraffle and Visio.
+
+Also included is a lightweight CSS file, which contains the grid dimensions.
+To use this file, simply include the 960.css in the <head> of the HTML page.	
+You may also use the reset.css and text.css files, or opt to leave them out.
+Here is an example of the XHTML code necessary to incorporate the CSS files:
+
+<head>
+<meta name="description" content="MiniCon Magazine description goes here" />
+<meta name="author" content="Your Name and Pukeko Design Studio" />
+<meta name="keywords" content="magazine"/>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/text.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/960.css" />
+</head>
+
+The files in the 960 Grid System are free of charge, licensed under GPL/MIT.
+
+============================================================================
+
+Special thanks to Eric Meyer for his comprehensive browser reset stylesheet.
+
+http://meyerweb.com/eric/tools/css/reset/
+
+*/
+
+body
+{
+	background: #fff;
+	color: #333;
+	font-family: Georgia, Times New Roman, serif;
+	font-size: 99.99%;
+}
+
+.container_12
+{
+	/*background: #fff url(../images/12_col.gif) repeat-y;*/
+	margin-left:auto;margin-right:auto;
+	width:960px
+}
+
+.grid_1,.grid_2,.grid_3,.grid_4,.grid_5,.grid_6,.grid_7,.grid_8,.grid_9,.grid_10,.grid_11,.grid_12,.grid_13,.grid_14,.grid_15,.grid_16 {
+display:inline;float:left;margin-left:10px;margin-right:10px; padding: 0 0 20px 0;
+}
+
+.container_12 .grid_3 {
+width:220px
+}
+
+.container_12 .grid_6 {
+width:460px
+}
+
+.container_12 .grid_9 {
+width:700px
+}
+
+.container_12 .grid_12 {
+width:940px
+}
+
+.alpha {
+margin-left:0
+}
+
+.omega {
+margin-right:0
+}
+
+.container_12 .grid_1 {
+width:60px
+}
+
+.container_12 .grid_2 {
+width:140px
+}
+
+.container_12 .grid_4 {
+width:300px
+}
+
+.container_12 .grid_5 {
+width:380px
+}
+
+.container_12 .grid_7 {
+width:540px
+}
+
+.container_12 .grid_8 {
+width:620px
+}
+
+.container_12 .grid_10 {
+width:780px
+}
+
+.container_12 .grid_11 {
+width:860px
+}
+
+.container_12 .prefix_3 {
+	padding-left:240px
+}
+
+.container_12 .prefix_6 {
+	padding-left:480px
+}
+
+.container_12 .prefix_9 {
+	padding-left:720px
+}
+
+.container_12 .prefix_1 {
+	padding-left:80px
+}
+
+.container_12 .prefix_2 {
+	padding-left:160px
+}
+
+.container_12 .prefix_4 {
+	padding-left:320px
+}
+
+.container_12 .prefix_5 {
+	padding-left:400px
+}
+
+.container_12 .prefix_7 {
+	padding-left:560px
+}
+
+.container_12 .prefix_8 {
+	padding-left:640px
+}
+
+.container_12 .prefix_10 {
+	padding-left:800px
+}
+
+.container_12 .prefix_11 {
+	padding-left:880px
+}
+
+.container_12 .suffix_3 {
+	padding-right:240px
+}
+
+.container_12 .suffix_6 {
+	padding-right:480px
+}
+
+.container_12 .suffix_9 {
+	padding-right:720px
+}
+
+.container_12 .suffix_1 {
+	padding-right:80px
+}
+
+.container_12 .suffix_2 {
+	padding-right:160px
+}
+
+.container_12 .suffix_4 {
+	padding-right:320px
+}
+
+.container_12 .suffix_5 {
+	padding-right:400px
+}
+
+.container_12 .suffix_7 {
+	padding-right:560px
+}
+
+.container_12 .suffix_8 {
+	padding-right:640px
+}
+
+.container_12 .suffix_10 {
+	padding-right:800px
+}
+
+.container_12 .suffix_11 {
+	padding-right:880px
+}
+
+
+/* CLEAR STUFF */
+
+.clear {
+clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0
+}
+
+.clearfix:after {
+clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0
+}
+
+.clearfix {
+display:inline-block
+}
+
+* html .clearfix {
+height:1%
+}
+
+.clearfix {
+display:block
+}
+
+.clear_soft {
+	clear: both;
+}

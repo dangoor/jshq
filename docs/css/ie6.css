@@ -1,0 +1,96 @@
+/* IE 6 CSS ONLY */
+
+.header ul {
+	padding: 85px 0 0 0;
+}
+.header ul li a {
+	line-height: 280%;
+}
+.logo h1 {
+	font-size: 1.3em;
+	padding-bottom: 0;
+}
+
+.home_feature {
+	display: inline;
+	float: left;
+	margin: 30px 10px 10px 10px;
+	width: 940px;
+	padding-bottom: 10px;
+}
+.home_article_text {
+	width: 420px;
+}
+.home_article_text, .home_feature_text {
+	padding-bottom: 10px;
+}
+
+.article_firstparagraph:first-letter {
+	line-height: 80%;
+}
+
+.comments_reply .comments_details {
+	margin-bottom: 5px;
+}
+
+ul {
+	margin: 0 0 20px 0;
+	padding: 0;
+	position: relative;
+	left: 0;
+	overflow: hidden;
+}
+ul li {
+	list-style-type: disc;
+	color: #333;
+	line-height: 140%;
+	padding: 5px 0;
+	margin: 0 0 0 1.2em;
+	font-size: 0.9em;
+}
+ul li ul {
+	margin: 0.5em 0 0 1.4em;
+}
+ul li ul li {
+	padding: 5px 0;
+	list-style-type:circle;
+}
+
+ol {
+	margin: 0 0 20px 0;
+	padding: 0;
+	position: relative;
+	left: 0;
+	overflow: hidden;
+}
+ol li {
+	list-style-type:decimal;
+	color: #333;
+	line-height: 140%;
+	padding: 5px 0;
+	margin: 0 0 0 2em;
+	font-size: 0.9em;
+}
+ol li ol {
+	margin: 0.5em 0 0 1.8em;
+}
+ol li ol li {
+	padding: 5px 0;
+	list-style-type:lower-alpha;
+}
+
+blockquote {
+	text-indent: 0;
+}
+
+
+.footer ul {
+	margin: 10px 0 10px 0;
+}
+.footer_newsletter_button {
+	padding: 2px 0 4px 0;
+}
+
+.bigLink a {
+	padding: 6px 8px;
+}

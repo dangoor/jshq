@@ -1,0 +1,615 @@
+/* 960 Grid System
+Version 1.1
+2008-12-15
+
+Created by Nathan Smith. See the official site for more info: http://960.gs/
+
+============================================================================
+
+Thank you for downloading the 960 Grid System. I hope it helps to streamline
+web development workflow. Enclosed in the bundle are printable sketch sheets
+and template files for Adobe Fireworks and Photoshop, OmniGraffle and Visio.
+
+Also included is a lightweight CSS file, which contains the grid dimensions.
+To use this file, simply include the 960.css in the <head> of the HTML page.	
+You may also use the reset.css and text.css files, or opt to leave them out.
+Here is an example of the XHTML code necessary to incorporate the CSS files:
+
+<head>
+<meta name="description" content="MiniCon Magazine description goes here" />
+<meta name="author" content="Your Name and Pukeko Design Studio" />
+<meta name="keywords" content="magazine"/>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/text.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/960.css" />
+</head>
+
+The files in the 960 Grid System are free of charge, licensed under GPL/MIT.
+
+============================================================================
+
+Special thanks to Eric Meyer for his comprehensive browser reset stylesheet.
+
+http://meyerweb.com/eric/tools/css/reset/
+
+*/
+
+/* All the rest of the stuff other than the 960 Grid System
+
+CSS Level 3 valid (for some reason Level 2.1 isn't valid...D'OH!)
+
+Coded by Joe Brightwell of Pukeko Design Studio
+www.pukekodesigns.co.nz
+Please visit my website and email me if you use this template!
+*/
+
+a
+{
+	color: #000;
+	text-decoration: none;
+}
+	a:hover {
+		color: #999;
+		border: none;
+		text-decoration: none;
+	}
+	a:focus {
+		outline:1px dotted invert
+	}
+	a img, a img:hover {
+		border: none;
+		text-decoration: none;
+	}
+
+
+h1
+{
+	font-family: Georgia, serif;
+	font-weight: normal;
+	font-size: 2em;
+	color: #000;
+}
+
+h2
+{
+	font-family: 'ATF Antique', Georgia, Times New Roman, sans-serif;
+	font-size: 1.6em;
+	font-weight: bold;
+	padding: 0;
+	margin: 25px 0 20px 0;
+	vertical-align: text-bottom;
+	color: #000;
+}
+	h2 a {
+		color: #000;
+		text-decoration: none;
+		border: none;
+	}
+	h2 a:hover {
+		color: #999;
+	}
+	.title { /* Page Title */
+		background: url(../images/diagonal.gif) repeat;
+		padding: 5px 10px;
+		margin-top: 35px;
+	}
+
+h3 {
+	font-size: 1.2em;
+	font-weight: bold;
+	font-family: 'ATF Antique', Georgia, Times New Roman, sans-serif;
+	color: #000;
+	margin: -6px 0 10px 0;
+	padding: 0;
+}
+	h3 a {
+		color: #000;
+		border-bottom: none;
+		text-decoration: none;
+	}
+	h3 a:hover{
+		color: #999;
+		border-bottom: none;
+		text-decoration: none;
+	}
+	
+h4 { 
+	font-family: Georgia, serif;
+	font-weight: normal;
+	font-size: 1.2em;
+	color: #000;
+	font-variant:small-caps;
+	letter-spacing:1px;
+	margin: 10px 0;
+}
+
+p
+{
+	margin: 0 0 20px 0;
+	line-height: 150%;
+	font-size: 0.8em;
+	color: #333;
+}
+	p a {
+		border-bottom: 1px solid;
+		text-decoration: none;
+		color: #000;
+	}
+	p a:hover {
+		color: #999;
+	}
+	
+blockquote {
+	font-size: 1.2em;
+	font-style: italic;
+	font-weight: normal;
+	text-indent: -0.3em;
+	padding: 10px 0;
+	margin: 30px 0;
+	line-height: 150%;
+	border-top: 1px dotted #000;
+	border-bottom: 1px dotted #000;
+}
+	blockquote p {
+		font-weight: normal;
+		margin: 0;
+		padding: 0;
+	}
+
+hr{border:0 #ccc solid;border-top-width:1px;clear:both;height:0}
+
+ul {
+	margin: 0 0 20px 0;
+	padding: 0;
+	position: relative;
+	left: -1.15em;
+	overflow: hidden;
+}
+	ul li {
+		list-style-type: disc;
+		color: #333;
+		line-height: 140%;
+		padding: 5px 0;
+		margin: 0 0 0 1.3em;
+		font-size: 0.9em;
+	}
+	ul li ul {
+		margin: 0.5em 0 0 1.1em;
+	}
+	ul li ul li {
+		padding: 5px 0;
+		list-style-type:circle;
+	}
+	ul li a {
+		text-decoration: none;
+		border-bottom: 1px solid;
+	}
+	ul li a:hover {
+		text-decoration: none;
+		border-bottom: none;
+	}
+
+ol {
+	margin: 0 0 20px 0;
+	padding: 0;
+	position: relative;
+	left: -1.8em;
+	overflow: hidden;
+}
+	ol li {
+		list-style-type:decimal;
+		color: #333;
+		line-height: 140%;
+		padding: 5px 0;
+		margin: 0 0 0 2em;
+		font-size: 0.9em;
+	}
+	ol li ol {
+		margin: 0.5em 0 0 1.5em;
+	}
+	ol li ol li {
+		padding: 5px 0;
+		list-style-type:lower-alpha;
+	}
+
+.logo
+{
+	background: #000;
+	height: 100px;
+	color: #fff;
+	margin-bottom: 10px;
+}
+	.logo h1 {
+		font-size: 1.2em;
+		text-align: center;
+		padding-top: 81px;
+		font-family: 'ATF Antique', Georgia, Times New Roman, sans-serif;
+		font-weight: bold;
+		line-height: 110%;
+		color: #fff;
+	}
+	.logo h1 a {
+		color: #fff;
+	}
+	.logo h1 a:hover {
+		color: #666;
+		text-decoration: none;
+		border: none;
+	}
+
+.header ul {
+	margin: 0;
+	padding: 85px 0 15px 0;
+	list-style-type:none;
+	float: right;
+	left: 0;
+}
+	.header ul li {
+		display: inline;
+		margin: 0;
+		padding: 0 0 0 5px;
+	}
+	.header ul li a {
+		color: #000;
+		text-decoration: none;
+		border: none;
+		margin: 0;
+		padding: 110px 20px 25px 20px;
+	}
+	.header ul li a:hover, .header ul li a.current { /* Current Page tab highlighter and mouse over tab */
+		color: #000;
+		text-decoration: none;
+		border: none;
+		background: url(../images/diagonal.gif) repeat;
+	}
+
+
+/* FOOTER */
+
+.footer {
+	background: #000;
+	color: #ccc;
+	padding: 20px 10px 10px 20px;
+	margin: 10px 10px 0 10px;
+	width: 910px;
+}
+	.footer p {
+		margin: 20px 0;
+		color: #ccc;
+	}
+	.footer h4 {
+		margin-top: 0;
+		color: #ccc;
+	}
+	.footer ul {
+		margin: 15px 0 30px 18px;
+		padding: 0;
+	}
+	.footer ul li {
+		margin: 0;
+		list-style-type:none;
+		padding: 10px 0;
+		color: #ccc;
+		font-size: 0.8em;
+	}
+	.footer ul li a, .footer a {
+		text-decoration: none;
+		border: none;
+		color: #ccc;
+	}
+	.footer ul li a:hover, .footer a:hover {
+		color: #999;
+		border-bottom: 1px solid;
+		text-decoration: none;
+	}
+	.footer_1 { /* footer column 1 */
+		float: left;
+		display: inline;
+		width: 295px;
+		margin-right: 5px;
+	}
+	.footer_2 { /* footer column 2 */
+		float: left;
+		display: inline;
+		width: 295px;
+		margin-right: 25px;
+	}
+	.footer_3 { /* footer column 3 */
+		float: left;
+		display: inline;
+		width: 290px;
+		margin-right: 0;
+	}
+	.copyright {
+		clear: both;
+		margin-top: 0;
+		font-variant: small-caps;
+	}
+	.footer_newsletter {
+		background:#fff;
+		color: #000;
+		width: 220px;
+		border: 0;
+		margin-top: 10px;
+		padding: 5px;
+	}
+	.footer_newsletter_button {
+		background:#fff;
+		color: #000;
+		width: 30px;
+		border: 0;
+		margin-top: 10px;
+		padding: 4px 0 4px 0;
+	}
+	.footer_newsletter_button:hover {
+		cursor: pointer;
+	}
+	.footer_newsletter_button:hover, .footer_newsletter_button:focus, .footer_newsletter:hover, .footer_newsletter:focus {
+		border: 0;
+		background: #ccc;
+	}
+
+
+/* HOME PAGE */
+
+/* Main article to be displayed at top of home page */
+.home_feature {
+	background: url(../images/diagonal.gif) repeat;
+	display: inline;
+	float: left;
+	margin: 35px 10px 10px 10px;
+	width: 940px;
+	padding-bottom: 20px;
+}
+	.home_feature h2 {
+		margin-top: 15px;
+	}
+.home_feature_photo {
+	width: 300px; 
+	float: left; 
+	display: inline; 
+	margin: 20px 0 0 20px;
+}
+.home_feature_text {
+	width: 580px; 
+	float: left; 
+	display: inline; margin: 0;
+}
+.home_feature_text p {
+	margin: 5px 0 15px 0;
+}
+
+/* Remaining home articles */
+.home_article_photo {
+	width: 140px; 
+	float: left; 
+	display: inline; 
+	margin: 20px 20px 20px 0;
+}
+.home_article_text {
+	width: 440px; 
+	float: left; 
+	display: inline; 
+	margin: 20px 20px 20px 0;
+}
+
+/* Latest photos at home */
+.home_photos {
+	padding: 0 16px 20px 0;
+}
+.home_photos_last {
+	padding: 0 0 20px 0;
+}
+
+.home_heading3 {
+	margin: 30px 0 10px 0;
+}
+
+
+
+/* ARTICLES */
+
+.article_firstparagraph {
+	font-size: 1em;
+	line-height: 135%;
+	font-variant:small-caps;
+	font-weight: bold;
+}
+.article_firstparagraph:first-letter {
+	font-size: 4.7em;
+	float: left;
+	margin: 8px 7px 0 0;
+	padding: 0;
+	font-weight: normal;
+}
+body:first-of-type .article_firstparagraph:first-letter {
+	margin-top: 20px; /*This selector is to target Webkit based browsers such as Safari, Google Chrome and Opera */
+}
+
+.article_date {
+	padding: 20px 0;
+	margin: 0 0 10px 10px;
+}
+
+.article_summary {
+	padding: 20px 0;
+	margin: 0 10px 10px 0;
+}
+
+.article_caption {
+	margin-bottom: 20px
+}
+
+
+/* PHOTOS */
+
+.photos_thumb {
+	margin: 0;
+}
+
+
+/* COMMENTS */
+
+#comments, #comment_form {
+	border-top: 1px dotted #000;
+	padding-top: 25px;
+}
+	#comments h3 {
+		margin-bottom: 0;
+	}
+	.comments_details {
+		font-size: 0.8em;
+		font-variant:small-caps;
+		color: #666;
+		margin-bottom: 10px;
+	}
+		.comments_details a {
+			color: #666;
+			border-bottom: 1px solid;
+		}
+		.comments_details a:hover {
+			color: #000;
+			border-bottom: 0;
+		}
+	.comments_name {
+		width: 300px;
+		padding: 20px 20px 20px 0;
+		float: left;
+		border-top: 1px dotted #000;
+	}
+	.comments_text {
+		width: 620px;
+		padding: 20px 0;
+		float: left;
+		border-top: 1px dotted #000;
+	}
+	.comments_name:last-child, .comments_text:last-child  {
+		padding-bottom: 0;
+	}
+
+	/* This is used to tab a comment that's a reply */
+	.comments_reply {
+		margin-left: 40px;
+		clear: both;
+	}
+	.comments_reply .comments_name {
+		width: 260px;
+	}
+	.comments_reply .comments_text {
+		width: 620px;
+	}
+	.comments_reply .comments_details {
+		margin-bottom: 20px;
+	}
+
+
+/* NEWS */
+
+.news_header {
+	clear: both;
+	margin: -3px 0 2px 0;
+}
+
+.news_details, .article_details { /* News or Article text such as the Date, Author and Comments */
+	font-style: italic;
+	text-align: right;
+	color: #666;
+	font-variant: small-caps;
+	line-height: 160%;
+}
+	p.news_details, p.article_details  {
+		margin: 0 0 17px 0;
+		padding: 0;
+	}
+	.news_details, .article_details a {
+		color: #666;
+	}
+
+	
+/* CONTACT FORM */
+
+input {
+	width: 200px;
+	padding: 0 0 5px 0;
+	border: none;
+	border-bottom: 1px dotted #000;
+	background:#fff;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+textarea {
+	width: 400px;
+	height: 200px;
+	padding: 5px;
+	border: 1px dotted #000;
+	background:#fff;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+	textarea:hover, textarea:focus {
+		border: 1px dotted #999;
+	}
+	input:hover, input:focus {
+		border-bottom: 1px dotted #999;
+	}
+
+.button {
+	width: 80px;
+	padding: 5px;
+	background: url(../images/diagonal_dark.gif) repeat #000;
+	border: 0;
+	margin-bottom: 10px;
+	color: #fff;
+	font-variant:small-caps;
+}
+	.button:hover, .button:focus {
+		background: url(../images/diagonal.gif) repeat;
+		cursor:pointer;
+		color: #000;
+		border: 0;
+	}
+
+/* MISC */
+
+/* Big Links are the links used for Pagination or Read More */
+.bigLink a {
+	color: #fff;
+	padding: 3px 8px 6px 8px;
+	font-family: 'ATF Antique', Georgia, Times New Roman, sans-serif;
+	font-size: 0.8em;
+	font-weight: bold;
+	background: url(../images/diagonal_dark.gif) repeat #000;
+}
+	.bigLink a:hover {
+		color: #000;
+		border-bottom: none;
+		text-decoration: none;
+		background: url(../images/diagonal.gif) repeat;
+	}
+
+/* Mainly used for floating images */
+.floatLeft {
+	float: left;
+	margin-right: 10px;
+}
+.floatRight {
+	float: right;
+	margin-left: 10px
+}
+
+/* Pagination links - Grid Left is for Previous links, Grid Right is for Next links */ 
+.grid_left, .grid_right {
+	display:inline;float:left;margin-left:10px;margin-right:10px; padding: 0 0 20px 0;
+	width: 460px;
+	text-align: left;
+}
+.grid_right {
+	text-align: right;
+}
+
+.margin_20 {
+	margin-bottom: 20px;
+}
+.margin_40 {
+	margin-bottom: 40px;
+}
