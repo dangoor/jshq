@@ -1,22 +1,9 @@
-<html>
-<head>
-  <title>CommonJS API</title>
-  <script src="../jshq.js"></script>
-  <link rel="stylesheet" href="../theme/tablesorter/style.css" type="text/css">
-  <script>
-    JSHQ.addLoadEvent(function() {
-      $LAB
-        .script("../lib/jquery.tablesorter.min.js")
-        .block(function() {
-          setTimeout(function() {
-            $('.tablesorter').tablesorter();
-          }, 10);
-        });
-    });
-  </script>
-</head>
-<body>
-  <div id="content"><h1>CommonJS</h1>
+---
+layout: default
+title: CommonJS API
+---
+  <h2 class="title">CommonJS</h2>
+  <div class="home_article_text">
     <p>JavaScript is a powerful object oriented language with some of the fastest dynamic language interpreters around. The official JavaScript specification defines APIs for some objects that are useful for building browser-based applications. However, the spec does not define a standard library that is useful for building a broader range of applications.</p>
     
     <p>The CommonJS API will fill that gap by defining APIs that handle many common application needs, ultimately providing a standard library as rich as those of Python, Ruby and Java. The intention is that an application developer will be able to write an application using the CommonJS APIs and then run that application across different JavaScript interpreters and host environments. With CommonJS-compliant systems, you can use JavaScript to write:</p>
@@ -31,7 +18,7 @@
     <p>Current version: <a href="0.1/index.html">0.1</a></p>
     <p>In development: <a href="0.5/index.html">0.5</a></p>
     
-    <h2>Implementations</h2>
+    <h3>Implementations</h3>
     <table id="implementations" class="tablesorter">
       <thead>
       <tr><th>Project</th><th>API Version</th><th>Interpreter</tr>
@@ -47,13 +34,10 @@
       </tbody>
     </table>
     
-    <h2>More information about CommonJS</h2>
+    <h3>More information about CommonJS</h3>
     
     <ul>
       <li><a href="process.html">Group Process</a></li>
       <li><a href="history.html">Project History</a></li>
     </ul>
-    
-</div>
-</body>
-</html>
+    </div>

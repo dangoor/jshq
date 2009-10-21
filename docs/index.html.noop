@@ -1,18 +1,17 @@
-<html>
-<head>
-  <title>JSHQ: JavaScript everywhere!</title>
-  <script src="jshq.js"></script>
-</head>
-<body>
-  <div id="content"><h1>JavaScript: the powerful dynamic language that everyone knows</h1>
+---
+layout: default
+title: "JSHQ: JavaScript everywhere!"
+---
+  <div class="home_feature clearfix">
+  <div class="home_feature_photo"><img src="images/explosion.jpg"></img></div>
+  <h2>JavaScript: the powerful dynamic language that everyone knows</h2>
+  <div class="home_feature_text">
+  <p>JavaScript already has incredibly wide deployment in web browsers (where it is
+    often blamed for incompatibilities and debugging nightmares that have little to
+    do with JavaScript). Additionally, JavaScript has been used as a server-side
+    language for more than a decade.</p>
 
-<p>JavaScript already has incredibly wide deployment in web browsers (where it is
-  often blamed for incompatibilities and debugging nightmares that have little to
-  do with JavaScript). Additionally, JavaScript has been used as a server-side
-  language for more than a decade.</p>
-
-<p>The CommonJS API helps to make JavaScript a fast,
-  powerful dynamic language that can be used for all sorts of applications.</p>
+  <p>The CommonJS API helps to make JavaScript a fast,
+    powerful dynamic language that can be used for all sorts of applications.</p>
 </div>
-</body>
-</html>
+</div>
