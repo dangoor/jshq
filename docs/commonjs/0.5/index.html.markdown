@@ -1,20 +1,21 @@
-<html>
-<head>
-  <title>CommonJS API 0.5
-  <script src="../../jshq.js"></script>
-</head>
-<body>
-  <div id="content"><h1>CommonJS API 0.5</h1>
-    <p>CommonJS 0.5 is currently being developed. It will enable a much broader range of applications to be developed an run seamlessly in different environments.</p>
-    
-    <ul>
-      <li><a href="../0.1/modules.html">Modules 1.0</a></li>
-      <li><a href="https://wiki.mozilla.org/ServerJS/Binary">Binary Data Type</a></li>
-      <li><a href="https://wiki.mozilla.org/ServerJS/Filesystem_API">Filesystem API</a></li>
-      <li><a href="https://wiki.mozilla.org/ServerJS/Unit_Testing">Unit Testing</a></li>
-      <li><a href="http://jackjs.org/jsgi-spec.html">JavaScript Gateway Interface (JSGI)</a></li>
-    </ul>
-    
-  </div>
-</body>
-</html>
+---
+layout: default
+title: CommonJS API 0.5
+---
+
+CommonJS API 0.5
+================
+
+CommonJS 0.5 is currently being developed. It will enable a much broader range of applications to be developed an run seamlessly in different environments.
+
+Here are the current specifications and discussions for 0.5:
+
+* [Modules 1.0](../0.1/modules.html)
+* [Binary Data Type](http://wiki.commonjs.org/wiki/Binary)
+* [Encodings](http://wiki.commonjs.org/wiki/Encodings)
+* [I/O Streams](http://wiki.commonjs.org/wiki/IO)
+* [Filesystem](http://wiki.commonjs.org/wiki/Filesystem)
+* [System interface](http://wiki.commonjs.org/wiki/System)
+* [Unit Testing](http://wiki.commonjs.org/wiki/Unit_Testing)
+* [Sockets](http://wiki.commonjs.org/wiki/Sockets)
+
