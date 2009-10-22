@@ -1,58 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-<title>{{page.title}}</title>
-<meta name="description" content="MiniCon Magazine description goes here">
-<meta name="author" content="Your Name and Pukeko Design Studio">
-<meta name="keywords" content="magazine">
-<link rel="shortcut icon" href="favicon.ico">
-<link rel="stylesheet" type="text/css" media="all" href="{{page.root}}css/reset.css">
-<link rel="stylesheet" type="text/css" media="all" href="{{page.root}}css/text.css">
-<link rel="stylesheet" type="text/css" media="all" href="{{page.root}}css/960.css">
-<!--[if IE 7]>
-<link rel="stylesheet" type="text/css" media="all" href="css/ie7.css">
-<![endif]-->
-<!--[if IE 6]>
-<link rel="stylesheet" type="text/css" media="all" href="css/ie6.css">
-<![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JSHQ: JavaScript Everywhere!</title>
+<link href="{{page.root}}css/styles.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.content {
+	background-image: url({{page.root}}images/banner_home.jpg);
+}
+.news_wrapper {
+	margin-top: 152px;
+}
+.content-left {
+	margin-left: 42px;
+	margin-top: 180px;
+}
+{% if page.urlparts|first == "commonjs" %}
+.nav2 {
+	background-image: url({{page.root}}images/nav_commonjs_on.png); /*turn on the corresponding nav item*/
+}
+.content-left h1 {
+	color: #4e5d2e; /*change the color of page headers*/
+}
+.content {
+	background-image: url({{page.root}}images/banner_green.jpg); /*change the color of the bg image*/
+}
+{% endif %}
+{% if page.urlparts|first == "javascript" %}
+.nav1 {
+	background-image: url({{page.root}}images/nav_js_on.png); /*turn the corresponding nav item on*/
+}
+.content-left h1 {
+	color: #266790;  /*change the color of the page headers*/
+}
+.content {
+	background-image: url({{page.root}}images/banner_blue.jpg);  /*change the color of the bg image*/
+}
+{% endif %}
+{% if page.urlparts|first == "browsers" %}
+.nav3 {
+	background-image: url({{page.root}}images/nav_browsers_on.png); /*turn on the corresponding nav item*/
+}
+.content-left h1 {
+	color: #8d6125; /*change the color of page headers*/
+}
+.content {
+	background-image: url({{page.root}}images/banner_orange.jpg); /*change the color of the bg image*/
+}
+{% endif %}
+</style>
 </head>
 <body>
-<div class="container_12">
-	<div class="grid_4 logo">
-		<h1><a href="{{page.root}}index.html">JS<br>HQ</a></h1>
-	</div><!-- end .grid_4-->
-	<div class="grid_8 header">
-		<ul>
-			<li><a href="{{page.root}}index.html" class="current">Home</a></li>
-			<li><a href="{{page.root}}javascript/index.html">JavaScript</a></li>
-			<li><a href="{{page.root}}commonjs/index.html">CommonJS</a></li>
-			<li><a href="{{page.root}}browsers/index.html">Browsers</a></li>
-		</ul>
-	</div><!-- end .grid_8-->
-	<div class="clear">&nbsp;</div>
-	{{content}}
-	<div class="clear">&nbsp;</div>
-	<div class="footer clearfix">
-		<div class="footer_1">
-			<h4>CommonJS on the net</h4>
-			<ul>
-			  <li><a href="http://groups.google.com/group/commonjs/">Mailing list</a></li>
-			  <li><a href="http://twitter.com/commonjs">Twitter</a></li>
-			  <li><a href="irc://irc.freenode.net/commonjs">#commonjs on irc.freenode.net</a></li>
-			</ul>
-		</div><!-- end .footer_1-->
-		<div class="footer_2">
-			<h4>Site Links</h4>
-			<ul>
-  			<li><a href="{{page.root}}index.html" class="current">Home</a></li>
-  			<li><a href="{{page.root}}javascript/index.html">JavaScript</a></li>
-  			<li><a href="{{page.root}}commonjs/index.html">CommonJS</a></li>
-  			<li><a href="{{page.root}}browsers/index.html">Browsers</a></li>
-			</ul>
-		</div><!-- end .footer_2-->
-		<p class="copyright">&copy; 2009 Kevin Dangoor and many contributors. Design based on MiniCon Magazine Theme by <a href="http://www.pukekodesigns.co.nz/">Joe Brightwell</a>.</p>
-	</div><!-- end .footer-->
-</div><!-- end .container_12 -->
+<div class="header_wrapper">
+  <div class="header_bg">
+    <div class="nav_wrapper">
+      <div class="nav_div"></div>
+      <div class="nav_item nav3"><a href="{{page.root}}browsers/index.html">browsers</a></div>
+      <div class="nav_div"></div>
+      <div class="nav_item nav2"><a href="{{page.root}}commonjs/index.html">commonjs</a></div>
+      <div class="nav_div"></div>
+      <div class="nav_item nav1"><a href="{{page.root}}javascript/index.html">javascript</a></div>
+      <div class="nav_div"></div>
+    </div>
+    <a href="{{page.root}}index.html"><img border="0" class="logo" src="{{page.root}}images/logo.png" width="111" height="65"></a>
+    <div class="tagline">javascript: not just for browsers any more!</div>
+  </div>
+</div>
+<div class="content_wrapper">
+  <div class="content_bg">
+    <div class="content">
+      <div class="content-left">
+        {{content}}
+      </div>
+      <div class="news_wrapper">
+        <div class="news-top">
+          <h1>latest.project (news)</h1>
+        </div>
+        <div class="news_items">
+          <ul>
+            <li> // <a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh </a><br />
+            </li>
+            <li>// <a href="#">Euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim</a> <br />
+            </li>
+            <li>// <a href="#">Ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl </a><br />
+            </li>
+            <li>// <a href="#">Aliquip ex ea commodo consequat Duis iriure</a><br />
+            </li>
+            <li>// <a href="#">Autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie</a><br />
+            </li>
+          </ul>
+          <br>
+          <br>
+          <h1>CommonJS Links</h1>
+    			<ul>
+    			  <li> // <a href="http://wiki.commonjs.org/">Wiki</a> (standards-in-training!)</li>
+    			  <li> // <a href="http://groups.google.com/group/commonjs/">Mailing list</a></li>
+    			  <li> // <a href="http://twitter.com/commonjs">Twitter</a></li>
+    			  <li> // <a href="irc://irc.freenode.net/commonjs">#commonjs on irc.freenode.net</a></li>
+    			</ul>
+        </div>
+      </div>
+      <div class="col_level">&nbsp;</div>
+    </div>
+  </div>
+</div>
+<div class="footer_wrapper">© Copyright info blah, blah, blah</div>
 </body>
 </html>
